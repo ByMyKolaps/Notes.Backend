@@ -16,7 +16,7 @@ namespace Notes.Application.Notes.Commands.DeleteNote
             _dbContext = dbContext;
         }
 
-        public async Task Handle(DeleteNoteCommand request, CancellationToken cancellationToken)
+        public async Task<Unit> Handle(DeleteNoteCommand request, CancellationToken cancellationToken)
         {
             var entity = await _dbContext.Notes
                 .FindAsync(new object[] { request.Id }, cancellationToken);
@@ -29,6 +29,8 @@ namespace Notes.Application.Notes.Commands.DeleteNote
             _dbContext.Notes.Remove(entity);
 
             await _dbContext.SaveChangesAsync(cancellationToken);
+
+            return Unit.Value;
         }
     }
 }
