@@ -6,6 +6,7 @@ using Notes.Persistence;
 using System;
 using System.Reflection;
 using Notes.Application;
+using Notes.WebApi.Middleware;
 
 namespace Notes.WebApi
 {
@@ -39,6 +40,7 @@ namespace Notes.WebApi
 
             var app = builder.Build();
 
+            app.UseCustomExceptionHandler();
             app.UseRouting();
             app.UseHttpsRedirection();
             app.UseCors("AllowALl");
