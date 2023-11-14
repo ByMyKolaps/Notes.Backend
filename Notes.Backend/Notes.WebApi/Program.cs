@@ -7,6 +7,7 @@ using System;
 using System.Reflection;
 using Notes.Application;
 using Notes.WebApi.Middleware;
+using Microsoft.AspNetCore.Authentication.JwtBearer;
 
 namespace Notes.WebApi
 {
@@ -38,15 +39,29 @@ namespace Notes.WebApi
                 });
             });
 
+            builder.Services.AddAuthentication(config =>
+            {
+                config.DefaultAuthenticateScheme =
+                    JwtBearerDefaults.AuthenticationScheme;
+                config.DefaultChallengeScheme =
+                    JwtBearerDefaults.AuthenticationScheme;
+            })
+                .AddJwtBearer("Bearer", options =>
+                {
+                    options.Authority = "https://localhost:7113/";
+                    options.Audience = "NotesWebAPI";
+                    options.RequireHttpsMetadata = false;
+                });
+
             var app = builder.Build();
 
             app.UseCustomExceptionHandler();
             app.UseRouting();
             app.UseHttpsRedirection();
             app.UseCors("AllowALl");
+            app.UseAuthentication();
+            app.UseAuthorization();
             app.MapControllers();
-
-            app.MapGet("/", () => "Hello World!");
 
             using (var scope = app.Services.CreateScope())
             {
