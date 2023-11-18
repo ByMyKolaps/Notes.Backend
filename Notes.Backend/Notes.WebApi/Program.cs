@@ -9,6 +9,9 @@ using Notes.Application;
 using Notes.WebApi.Middleware;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
 using System.IO;
+using Microsoft.Extensions.Options;
+using Swashbuckle.AspNetCore.SwaggerGen;
+using Microsoft.AspNetCore.Mvc.ApiExplorer;
 
 namespace Notes.WebApi
 {
@@ -54,6 +57,12 @@ namespace Notes.WebApi
                     options.RequireHttpsMetadata = false;
                 });
 
+            builder.Services.AddVersionedApiExplorer(options =>
+                options.GroupNameFormat = "'v'VVV");
+            builder.Services
+                .AddTransient<IConfigureOptions<SwaggerGenOptions>, ConfigureSwaggerOptions>();
+                
+
             builder.Services.AddSwaggerGen(config =>
             {
                 var xmlFile = $"{Assembly.GetExecutingAssembly().GetName().Name}.xml";
@@ -61,20 +70,30 @@ namespace Notes.WebApi
                 config.IncludeXmlComments(xmlPath);
             });
 
+            builder.Services.AddApiVersioning();
+
             var app = builder.Build();
 
+            
             app.UseSwagger();
             app.UseSwaggerUI(config =>
             {
-                config.RoutePrefix = string.Empty;
-                config.SwaggerEndpoint("swagger/v1/swagger.json", "Notes API");
+                var apiVersionProvider = (IApiVersionDescriptionProvider)app.Services.GetRequiredService(typeof(IApiVersionDescriptionProvider));
+                foreach (var description in apiVersionProvider.ApiVersionDescriptions)
+                {
+                    config.SwaggerEndpoint(
+                        $"/swagger/{description.GroupName}/swagger.json",
+                        description.GroupName.ToUpperInvariant());
+                    config.RoutePrefix = string.Empty;
+                }
             });
             app.UseCustomExceptionHandler();
             app.UseRouting();
             app.UseHttpsRedirection();
-            app.UseCors("AllowALl");
+            app.UseCors("AllowAll");
             app.UseAuthentication();
             app.UseAuthorization();
+            app.UseApiVersioning();
             app.MapControllers();
 
             using (var scope = app.Services.CreateScope())

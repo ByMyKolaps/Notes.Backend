@@ -9,7 +9,7 @@ namespace Notes.WebApi.Models
     {
         [Required]
         public string Title { get; set; }
-        public string Details { get; set; }
+        public string? Details { get; set; }
 
         public void Mapping(Profile profile)
         {

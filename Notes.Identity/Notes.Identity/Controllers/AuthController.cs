@@ -36,14 +36,6 @@ namespace Notes.Identity.Controllers
         {
             if (!ModelState.IsValid)
             {
-                foreach (var item in ModelState)
-                {
-                    // пробегаемся по всем ошибкам
-                    foreach (var error in item.Value.Errors)
-                    {
-                        var temp = error;
-                    }
-                }
                 return View(viewModel);
             }
 
