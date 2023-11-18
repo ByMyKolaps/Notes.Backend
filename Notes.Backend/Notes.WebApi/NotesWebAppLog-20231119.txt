@@ -1,0 +1,274 @@
+2023-11-19 01:11:55.355 +03:00 [INF] Entity Framework Core 6.0.25 initialized 'NotesDbContext' using provider 'Microsoft.EntityFrameworkCore.Sqlite:6.0.25' with options: None
+2023-11-19 01:11:55.632 +03:00 [INF] Executed DbCommand (21ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT COUNT(*) FROM "sqlite_master" WHERE "type" = 'table' AND "rootpage" IS NOT NULL;
+2023-11-19 01:11:55.718 +03:00 [INF] User profile is available. Using 'C:\Users\Bulat\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2023-11-19 01:11:56.107 +03:00 [INF] Now listening on: https://localhost:7156
+2023-11-19 01:11:56.107 +03:00 [INF] Now listening on: http://localhost:5205
+2023-11-19 01:11:56.108 +03:00 [INF] Application started. Press Ctrl+C to shut down.
+2023-11-19 01:11:56.108 +03:00 [INF] Hosting environment: Development
+2023-11-19 01:11:56.108 +03:00 [INF] Content root path: C:\Users\Bulat\Desktop\Production\Notes\Notes.Backend\Notes.WebApi\
+2023-11-19 01:11:56.911 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7156/index.html - -
+2023-11-19 01:11:57.385 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7156/_framework/aspnetcore-browser-refresh.js - -
+2023-11-19 01:11:57.395 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7156/index.html - - - 200 - text/html;charset=utf-8 491.1149ms
+2023-11-19 01:11:57.395 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7156/_framework/aspnetcore-browser-refresh.js - - - 200 12356 application/javascript;+charset=utf-8 9.2138ms
+2023-11-19 01:11:57.424 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7156/_vs/browserLink - -
+2023-11-19 01:11:57.456 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7156/_vs/browserLink - - - 200 - text/javascript;+charset=UTF-8 32.8186ms
+2023-11-19 01:11:57.599 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7156/swagger/v1/swagger.json - -
+2023-11-19 01:11:57.879 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7156/swagger/v1/swagger.json - - - 200 - application/json;charset=utf-8 280.2072ms
+2023-11-19 01:13:55.605 +03:00 [INF] Request starting HTTP/2 OPTIONS https://localhost:7156/api/1.0/Note - -
+2023-11-19 01:13:55.647 +03:00 [INF] CORS policy execution successful.
+2023-11-19 01:13:55.648 +03:00 [INF] Request finished HTTP/2 OPTIONS https://localhost:7156/api/1.0/Note - - - 204 - - 43.4690ms
+2023-11-19 01:13:55.651 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7156/api/1.0/Note - -
+2023-11-19 01:13:55.663 +03:00 [INF] CORS policy execution successful.
+2023-11-19 01:13:56.422 +03:00 [INF] Executing endpoint 'Notes.WebApi.Controllers.NoteController.GetAll (Notes.WebApi)'
+2023-11-19 01:13:56.453 +03:00 [INF] Route matched with {action = "GetAll", controller = "Note"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[Notes.Application.Notes.Queries.GetNoteList.NoteListVm]] GetAll() on controller Notes.WebApi.Controllers.NoteController (Notes.WebApi).
+2023-11-19 01:13:56.724 +03:00 [INF] Notes Request: GetNoteListQuery "7d19d226-1bd2-419b-841c-624e0fc87875" {"UserId":"7d19d226-1bd2-419b-841c-624e0fc87875","$type":"GetNoteListQuery"}
+2023-11-19 01:13:56.750 +03:00 [INF] Entity Framework Core 6.0.25 initialized 'NotesDbContext' using provider 'Microsoft.EntityFrameworkCore.Sqlite:6.0.25' with options: None
+2023-11-19 01:13:57.331 +03:00 [INF] Executed DbCommand (12ms) [Parameters=[@__request_UserId_0='?' (DbType = Guid)], CommandType='"Text"', CommandTimeout='30']
+SELECT "n"."Id", "n"."Title"
+FROM "Notes" AS "n"
+WHERE "n"."UserId" = @__request_UserId_0
+2023-11-19 01:13:57.361 +03:00 [INF] Executing OkObjectResult, writing value of type 'Notes.Application.Notes.Queries.GetNoteList.NoteListVm'.
+2023-11-19 01:13:57.373 +03:00 [INF] Executed action Notes.WebApi.Controllers.NoteController.GetAll (Notes.WebApi) in 914.0286ms
+2023-11-19 01:13:57.374 +03:00 [INF] Executed endpoint 'Notes.WebApi.Controllers.NoteController.GetAll (Notes.WebApi)'
+2023-11-19 01:13:57.385 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7156/api/1.0/Note - - - 200 - application/json;+charset=utf-8 1733.8702ms
+2023-11-19 01:15:38.077 +03:00 [INF] Request starting HTTP/2 OPTIONS https://localhost:7156/api/1.0/Note - -
+2023-11-19 01:15:38.078 +03:00 [INF] CORS policy execution successful.
+2023-11-19 01:15:38.078 +03:00 [INF] Request finished HTTP/2 OPTIONS https://localhost:7156/api/1.0/Note - - - 204 - - 1.2844ms
+2023-11-19 01:15:38.080 +03:00 [INF] Request starting HTTP/2 POST https://localhost:7156/api/1.0/Note application/json 16
+2023-11-19 01:15:38.081 +03:00 [INF] CORS policy execution successful.
+2023-11-19 01:15:38.083 +03:00 [INF] Executing endpoint 'Notes.WebApi.Controllers.NoteController.Create (Notes.WebApi)'
+2023-11-19 01:15:38.098 +03:00 [INF] Route matched with {action = "Create", controller = "Note"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[System.Guid]] Create(Notes.WebApi.Models.CreateNoteDto) on controller Notes.WebApi.Controllers.NoteController (Notes.WebApi).
+2023-11-19 01:15:38.190 +03:00 [INF] Notes Request: CreateNoteCommand "7d19d226-1bd2-419b-841c-624e0fc87875" {"UserId":"7d19d226-1bd2-419b-841c-624e0fc87875","Title":"Jaja","Details":null,"$type":"CreateNoteCommand"}
+2023-11-19 01:15:38.248 +03:00 [INF] Entity Framework Core 6.0.25 initialized 'NotesDbContext' using provider 'Microsoft.EntityFrameworkCore.Sqlite:6.0.25' with options: None
+2023-11-19 01:15:38.473 +03:00 [INF] Executed DbCommand (0ms) [Parameters=[@p0='?' (DbType = Guid), @p1='?' (DbType = DateTime), @p2='?', @p3='?' (DbType = DateTime), @p4='?' (Size = 4), @p5='?' (DbType = Guid)], CommandType='"Text"', CommandTimeout='30']
+INSERT INTO "Notes" ("Id", "CreationDate", "Details", "EditDate", "Title", "UserId")
+VALUES (@p0, @p1, @p2, @p3, @p4, @p5);
+2023-11-19 01:15:38.514 +03:00 [INF] Executing OkObjectResult, writing value of type 'System.Guid'.
+2023-11-19 01:15:38.515 +03:00 [INF] Executed action Notes.WebApi.Controllers.NoteController.Create (Notes.WebApi) in 417.138ms
+2023-11-19 01:15:38.515 +03:00 [INF] Executed endpoint 'Notes.WebApi.Controllers.NoteController.Create (Notes.WebApi)'
+2023-11-19 01:15:38.516 +03:00 [INF] Request finished HTTP/2 POST https://localhost:7156/api/1.0/Note application/json 16 - 200 - application/json;+charset=utf-8 435.1815ms
+2023-11-19 01:15:38.522 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7156/api/1.0/Note - -
+2023-11-19 01:15:38.522 +03:00 [INF] CORS policy execution successful.
+2023-11-19 01:15:38.525 +03:00 [INF] Executing endpoint 'Notes.WebApi.Controllers.NoteController.GetAll (Notes.WebApi)'
+2023-11-19 01:15:38.525 +03:00 [INF] Route matched with {action = "GetAll", controller = "Note"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[Notes.Application.Notes.Queries.GetNoteList.NoteListVm]] GetAll() on controller Notes.WebApi.Controllers.NoteController (Notes.WebApi).
+2023-11-19 01:15:38.526 +03:00 [INF] Notes Request: GetNoteListQuery "7d19d226-1bd2-419b-841c-624e0fc87875" {"UserId":"7d19d226-1bd2-419b-841c-624e0fc87875","$type":"GetNoteListQuery"}
+2023-11-19 01:15:38.527 +03:00 [INF] Entity Framework Core 6.0.25 initialized 'NotesDbContext' using provider 'Microsoft.EntityFrameworkCore.Sqlite:6.0.25' with options: None
+2023-11-19 01:15:38.534 +03:00 [INF] Executed DbCommand (0ms) [Parameters=[@__request_UserId_0='?' (DbType = Guid)], CommandType='"Text"', CommandTimeout='30']
+SELECT "n"."Id", "n"."Title"
+FROM "Notes" AS "n"
+WHERE "n"."UserId" = @__request_UserId_0
+2023-11-19 01:15:38.534 +03:00 [INF] Executing OkObjectResult, writing value of type 'Notes.Application.Notes.Queries.GetNoteList.NoteListVm'.
+2023-11-19 01:15:38.534 +03:00 [INF] Executed action Notes.WebApi.Controllers.NoteController.GetAll (Notes.WebApi) in 9.4451ms
+2023-11-19 01:15:38.534 +03:00 [INF] Executed endpoint 'Notes.WebApi.Controllers.NoteController.GetAll (Notes.WebApi)'
+2023-11-19 01:15:38.535 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7156/api/1.0/Note - - - 200 - application/json;+charset=utf-8 13.1914ms
+2023-11-19 01:25:02.924 +03:00 [INF] Entity Framework Core 6.0.25 initialized 'NotesDbContext' using provider 'Microsoft.EntityFrameworkCore.Sqlite:6.0.25' with options: None
+2023-11-19 01:25:13.640 +03:00 [INF] Executed DbCommand (27ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT COUNT(*) FROM "sqlite_master" WHERE "type" = 'table' AND "rootpage" IS NOT NULL;
+2023-11-19 01:25:13.728 +03:00 [INF] User profile is available. Using 'C:\Users\Bulat\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2023-11-19 01:25:14.168 +03:00 [INF] Now listening on: https://localhost:7156
+2023-11-19 01:25:14.168 +03:00 [INF] Now listening on: http://localhost:5205
+2023-11-19 01:25:14.168 +03:00 [INF] Application started. Press Ctrl+C to shut down.
+2023-11-19 01:25:14.168 +03:00 [INF] Hosting environment: Development
+2023-11-19 01:25:14.169 +03:00 [INF] Content root path: C:\Users\Bulat\Desktop\Production\Notes\Notes.Backend\Notes.WebApi\
+2023-11-19 01:25:14.734 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7156/index.html - -
+2023-11-19 01:25:15.173 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7156/_framework/aspnetcore-browser-refresh.js - -
+2023-11-19 01:25:15.185 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7156/_framework/aspnetcore-browser-refresh.js - - - 200 12356 application/javascript;+charset=utf-8 10.0639ms
+2023-11-19 01:25:15.186 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7156/index.html - - - 200 - text/html;charset=utf-8 457.9097ms
+2023-11-19 01:25:15.216 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7156/_vs/browserLink - -
+2023-11-19 01:25:15.254 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7156/_vs/browserLink - - - 200 - text/javascript;+charset=UTF-8 38.6419ms
+2023-11-19 01:25:15.390 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7156/swagger/v1/swagger.json - -
+2023-11-19 01:25:15.681 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7156/swagger/v1/swagger.json - - - 200 - application/json;charset=utf-8 290.7716ms
+2023-11-19 01:25:39.352 +03:00 [INF] Request starting HTTP/2 OPTIONS https://localhost:7156/api/1.0/Note - -
+2023-11-19 01:25:39.382 +03:00 [INF] CORS policy execution successful.
+2023-11-19 01:25:39.384 +03:00 [INF] Request finished HTTP/2 OPTIONS https://localhost:7156/api/1.0/Note - - - 204 - - 32.5500ms
+2023-11-19 01:25:39.386 +03:00 [INF] Request starting HTTP/2 POST https://localhost:7156/api/1.0/Note application/json 15
+2023-11-19 01:25:39.396 +03:00 [INF] CORS policy execution successful.
+2023-11-19 01:25:40.069 +03:00 [INF] Executing endpoint 'Notes.WebApi.Controllers.NoteController.Create (Notes.WebApi)'
+2023-11-19 01:25:40.102 +03:00 [INF] Route matched with {action = "Create", controller = "Note"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[System.Guid]] Create(Notes.WebApi.Models.CreateNoteDto) on controller Notes.WebApi.Controllers.NoteController (Notes.WebApi).
+2023-11-19 01:25:58.427 +03:00 [INF] Notes Request: CreateNoteCommand "7d19d226-1bd2-419b-841c-624e0fc87875" {"UserId":"7d19d226-1bd2-419b-841c-624e0fc87875","Title":"Nbv","Details":null,"$type":"CreateNoteCommand"}
+2023-11-19 01:26:00.494 +03:00 [INF] Entity Framework Core 6.0.25 initialized 'NotesDbContext' using provider 'Microsoft.EntityFrameworkCore.Sqlite:6.0.25' with options: None
+2023-11-19 01:26:00.825 +03:00 [INF] Executed DbCommand (19ms) [Parameters=[@p0='?' (DbType = Guid), @p1='?' (DbType = DateTime), @p2='?', @p3='?' (DbType = DateTime), @p4='?' (Size = 3), @p5='?' (DbType = Guid)], CommandType='"Text"', CommandTimeout='30']
+INSERT INTO "Notes" ("Id", "CreationDate", "Details", "EditDate", "Title", "UserId")
+VALUES (@p0, @p1, @p2, @p3, @p4, @p5);
+2023-11-19 01:26:00.890 +03:00 [INF] Executing OkObjectResult, writing value of type 'System.Guid'.
+2023-11-19 01:26:00.908 +03:00 [INF] Executed action Notes.WebApi.Controllers.NoteController.Create (Notes.WebApi) in 20793.7515ms
+2023-11-19 01:26:00.910 +03:00 [INF] Executed endpoint 'Notes.WebApi.Controllers.NoteController.Create (Notes.WebApi)'
+2023-11-19 01:26:00.911 +03:00 [INF] Request starting HTTP/2 OPTIONS https://localhost:7156/api/1.0/Note - -
+2023-11-19 01:26:00.912 +03:00 [INF] CORS policy execution successful.
+2023-11-19 01:26:00.913 +03:00 [INF] Request finished HTTP/2 OPTIONS https://localhost:7156/api/1.0/Note - - - 204 - - 1.2663ms
+2023-11-19 01:26:00.915 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7156/api/1.0/Note - -
+2023-11-19 01:26:00.916 +03:00 [INF] CORS policy execution successful.
+2023-11-19 01:26:00.918 +03:00 [INF] Executing endpoint 'Notes.WebApi.Controllers.NoteController.GetAll (Notes.WebApi)'
+2023-11-19 01:26:00.921 +03:00 [INF] Request finished HTTP/2 POST https://localhost:7156/api/1.0/Note application/json 15 - 200 - application/json;+charset=utf-8 21535.4519ms
+2023-11-19 01:26:00.924 +03:00 [INF] Route matched with {action = "GetAll", controller = "Note"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[Notes.Application.Notes.Queries.GetNoteList.NoteListVm]] GetAll() on controller Notes.WebApi.Controllers.NoteController (Notes.WebApi).
+2023-11-19 01:26:02.683 +03:00 [INF] Notes Request: GetNoteListQuery "7d19d226-1bd2-419b-841c-624e0fc87875" {"UserId":"7d19d226-1bd2-419b-841c-624e0fc87875","$type":"GetNoteListQuery"}
+2023-11-19 01:26:02.750 +03:00 [INF] Entity Framework Core 6.0.25 initialized 'NotesDbContext' using provider 'Microsoft.EntityFrameworkCore.Sqlite:6.0.25' with options: None
+2023-11-19 01:26:03.297 +03:00 [INF] Executed DbCommand (0ms) [Parameters=[@__request_UserId_0='?' (DbType = Guid)], CommandType='"Text"', CommandTimeout='30']
+SELECT "n"."Id", "n"."Title"
+FROM "Notes" AS "n"
+WHERE "n"."UserId" = @__request_UserId_0
+2023-11-19 01:26:03.302 +03:00 [INF] Executing OkObjectResult, writing value of type 'Notes.Application.Notes.Queries.GetNoteList.NoteListVm'.
+2023-11-19 01:26:03.307 +03:00 [INF] Executed action Notes.WebApi.Controllers.NoteController.GetAll (Notes.WebApi) in 2382.6759ms
+2023-11-19 01:26:03.307 +03:00 [INF] Executed endpoint 'Notes.WebApi.Controllers.NoteController.GetAll (Notes.WebApi)'
+2023-11-19 01:26:03.308 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7156/api/1.0/Note - - - 200 - application/json;+charset=utf-8 2392.8059ms
+2023-11-19 01:28:27.454 +03:00 [INF] Entity Framework Core 6.0.25 initialized 'NotesDbContext' using provider 'Microsoft.EntityFrameworkCore.Sqlite:6.0.25' with options: None
+2023-11-19 01:28:27.660 +03:00 [INF] Executed DbCommand (20ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT COUNT(*) FROM "sqlite_master" WHERE "type" = 'table' AND "rootpage" IS NOT NULL;
+2023-11-19 01:28:27.745 +03:00 [INF] User profile is available. Using 'C:\Users\Bulat\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2023-11-19 01:28:28.075 +03:00 [INF] Now listening on: https://localhost:7156
+2023-11-19 01:28:28.075 +03:00 [INF] Now listening on: http://localhost:5205
+2023-11-19 01:28:28.076 +03:00 [INF] Application started. Press Ctrl+C to shut down.
+2023-11-19 01:28:28.076 +03:00 [INF] Hosting environment: Development
+2023-11-19 01:28:28.076 +03:00 [INF] Content root path: C:\Users\Bulat\Desktop\Production\Notes\Notes.Backend\Notes.WebApi\
+2023-11-19 01:28:28.917 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7156/index.html - -
+2023-11-19 01:28:29.336 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7156/_framework/aspnetcore-browser-refresh.js - -
+2023-11-19 01:28:29.348 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7156/_framework/aspnetcore-browser-refresh.js - - - 200 12356 application/javascript;+charset=utf-8 9.3634ms
+2023-11-19 01:28:29.348 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7156/index.html - - - 200 - text/html;charset=utf-8 434.1213ms
+2023-11-19 01:28:29.380 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7156/_vs/browserLink - -
+2023-11-19 01:28:29.413 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7156/_vs/browserLink - - - 200 - text/javascript;+charset=UTF-8 32.9812ms
+2023-11-19 01:28:29.534 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7156/swagger/v1/swagger.json - -
+2023-11-19 01:28:29.805 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7156/swagger/v1/swagger.json - - - 200 - application/json;charset=utf-8 270.7265ms
+2023-11-19 01:29:21.667 +03:00 [INF] Request starting HTTP/2 OPTIONS https://localhost:7156/api/1.0/Note - -
+2023-11-19 01:29:21.703 +03:00 [INF] CORS policy execution successful.
+2023-11-19 01:29:21.705 +03:00 [INF] Request finished HTTP/2 OPTIONS https://localhost:7156/api/1.0/Note - - - 204 - - 39.0152ms
+2023-11-19 01:29:21.707 +03:00 [INF] Request starting HTTP/2 POST https://localhost:7156/api/1.0/Note application/json 16
+2023-11-19 01:29:21.717 +03:00 [INF] CORS policy execution successful.
+2023-11-19 01:29:22.367 +03:00 [INF] Executing endpoint 'Notes.WebApi.Controllers.NoteController.Create (Notes.WebApi)'
+2023-11-19 01:29:22.401 +03:00 [INF] Route matched with {action = "Create", controller = "Note"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[System.Guid]] Create(Notes.WebApi.Models.CreateNoteDto) on controller Notes.WebApi.Controllers.NoteController (Notes.WebApi).
+2023-11-19 01:29:30.749 +03:00 [INF] Notes Request: CreateNoteCommand "7d19d226-1bd2-419b-841c-624e0fc87875" {"UserId":"7d19d226-1bd2-419b-841c-624e0fc87875","Title":"Jeki","Details":null,"$type":"CreateNoteCommand"}
+2023-11-19 01:29:30.779 +03:00 [INF] Entity Framework Core 6.0.25 initialized 'NotesDbContext' using provider 'Microsoft.EntityFrameworkCore.Sqlite:6.0.25' with options: None
+2023-11-19 01:29:31.095 +03:00 [INF] Executed DbCommand (11ms) [Parameters=[@p0='?' (DbType = Guid), @p1='?' (DbType = DateTime), @p2='?', @p3='?' (DbType = DateTime), @p4='?' (Size = 4), @p5='?' (DbType = Guid)], CommandType='"Text"', CommandTimeout='30']
+INSERT INTO "Notes" ("Id", "CreationDate", "Details", "EditDate", "Title", "UserId")
+VALUES (@p0, @p1, @p2, @p3, @p4, @p5);
+2023-11-19 01:29:31.164 +03:00 [INF] Executing OkObjectResult, writing value of type 'System.Guid'.
+2023-11-19 01:29:31.177 +03:00 [INF] Executed action Notes.WebApi.Controllers.NoteController.Create (Notes.WebApi) in 8768.8478ms
+2023-11-19 01:29:31.179 +03:00 [INF] Executed endpoint 'Notes.WebApi.Controllers.NoteController.Create (Notes.WebApi)'
+2023-11-19 01:29:31.188 +03:00 [INF] Request starting HTTP/2 OPTIONS https://localhost:7156/api/1.0/Note - -
+2023-11-19 01:29:31.189 +03:00 [INF] Request finished HTTP/2 POST https://localhost:7156/api/1.0/Note application/json 16 - 200 - application/json;+charset=utf-8 9481.3943ms
+2023-11-19 01:29:31.189 +03:00 [INF] CORS policy execution successful.
+2023-11-19 01:29:31.189 +03:00 [INF] Request finished HTTP/2 OPTIONS https://localhost:7156/api/1.0/Note - - - 204 - - 1.2288ms
+2023-11-19 01:29:31.193 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7156/api/1.0/Note - -
+2023-11-19 01:29:31.193 +03:00 [INF] CORS policy execution successful.
+2023-11-19 01:29:31.195 +03:00 [INF] Executing endpoint 'Notes.WebApi.Controllers.NoteController.GetAll (Notes.WebApi)'
+2023-11-19 01:29:31.200 +03:00 [INF] Route matched with {action = "GetAll", controller = "Note"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[Notes.Application.Notes.Queries.GetNoteList.NoteListVm]] GetAll() on controller Notes.WebApi.Controllers.NoteController (Notes.WebApi).
+2023-11-19 01:29:35.375 +03:00 [INF] Notes Request: GetNoteListQuery "7d19d226-1bd2-419b-841c-624e0fc87875" {"UserId":"7d19d226-1bd2-419b-841c-624e0fc87875","$type":"GetNoteListQuery"}
+2023-11-19 01:29:35.441 +03:00 [INF] Entity Framework Core 6.0.25 initialized 'NotesDbContext' using provider 'Microsoft.EntityFrameworkCore.Sqlite:6.0.25' with options: None
+2023-11-19 01:29:35.977 +03:00 [INF] Executed DbCommand (0ms) [Parameters=[@__request_UserId_0='?' (DbType = Guid)], CommandType='"Text"', CommandTimeout='30']
+SELECT "n"."Id", "n"."Title"
+FROM "Notes" AS "n"
+WHERE "n"."UserId" = @__request_UserId_0
+2023-11-19 01:29:35.982 +03:00 [INF] Executing OkObjectResult, writing value of type 'Notes.Application.Notes.Queries.GetNoteList.NoteListVm'.
+2023-11-19 01:29:35.984 +03:00 [INF] Executed action Notes.WebApi.Controllers.NoteController.GetAll (Notes.WebApi) in 4784.1452ms
+2023-11-19 01:29:35.985 +03:00 [INF] Executed endpoint 'Notes.WebApi.Controllers.NoteController.GetAll (Notes.WebApi)'
+2023-11-19 01:29:35.985 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7156/api/1.0/Note - - - 200 - application/json;+charset=utf-8 4792.6381ms
+2023-11-19 01:29:40.829 +03:00 [INF] Request starting HTTP/2 OPTIONS https://localhost:7156/api/1.0/Note - -
+2023-11-19 01:29:40.829 +03:00 [INF] CORS policy execution successful.
+2023-11-19 01:29:40.829 +03:00 [INF] Request finished HTTP/2 OPTIONS https://localhost:7156/api/1.0/Note - - - 204 - - 0.6173ms
+2023-11-19 01:29:40.832 +03:00 [INF] Request starting HTTP/2 POST https://localhost:7156/api/1.0/Note application/json 14
+2023-11-19 01:29:40.832 +03:00 [INF] CORS policy execution successful.
+2023-11-19 01:29:40.836 +03:00 [INF] Executing endpoint 'Notes.WebApi.Controllers.NoteController.Create (Notes.WebApi)'
+2023-11-19 01:29:40.836 +03:00 [INF] Route matched with {action = "Create", controller = "Note"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[System.Guid]] Create(Notes.WebApi.Models.CreateNoteDto) on controller Notes.WebApi.Controllers.NoteController (Notes.WebApi).
+2023-11-19 01:29:42.772 +03:00 [INF] Notes Request: CreateNoteCommand "7d19d226-1bd2-419b-841c-624e0fc87875" {"UserId":"7d19d226-1bd2-419b-841c-624e0fc87875","Title":"Tt","Details":null,"$type":"CreateNoteCommand"}
+2023-11-19 01:29:42.773 +03:00 [INF] Entity Framework Core 6.0.25 initialized 'NotesDbContext' using provider 'Microsoft.EntityFrameworkCore.Sqlite:6.0.25' with options: None
+2023-11-19 01:29:42.776 +03:00 [INF] Executed DbCommand (0ms) [Parameters=[@p0='?' (DbType = Guid), @p1='?' (DbType = DateTime), @p2='?', @p3='?' (DbType = DateTime), @p4='?' (Size = 2), @p5='?' (DbType = Guid)], CommandType='"Text"', CommandTimeout='30']
+INSERT INTO "Notes" ("Id", "CreationDate", "Details", "EditDate", "Title", "UserId")
+VALUES (@p0, @p1, @p2, @p3, @p4, @p5);
+2023-11-19 01:29:42.779 +03:00 [INF] Executing OkObjectResult, writing value of type 'System.Guid'.
+2023-11-19 01:29:42.779 +03:00 [INF] Executed action Notes.WebApi.Controllers.NoteController.Create (Notes.WebApi) in 1942.4077ms
+2023-11-19 01:29:42.779 +03:00 [INF] Executed endpoint 'Notes.WebApi.Controllers.NoteController.Create (Notes.WebApi)'
+2023-11-19 01:29:42.779 +03:00 [INF] Request finished HTTP/2 POST https://localhost:7156/api/1.0/Note application/json 14 - 200 - application/json;+charset=utf-8 1947.3424ms
+2023-11-19 01:29:42.786 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7156/api/1.0/Note - -
+2023-11-19 01:29:42.786 +03:00 [INF] CORS policy execution successful.
+2023-11-19 01:29:42.787 +03:00 [INF] Executing endpoint 'Notes.WebApi.Controllers.NoteController.GetAll (Notes.WebApi)'
+2023-11-19 01:29:42.787 +03:00 [INF] Route matched with {action = "GetAll", controller = "Note"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[Notes.Application.Notes.Queries.GetNoteList.NoteListVm]] GetAll() on controller Notes.WebApi.Controllers.NoteController (Notes.WebApi).
+2023-11-19 01:30:19.192 +03:00 [INF] Notes Request: GetNoteListQuery "7d19d226-1bd2-419b-841c-624e0fc87875" {"UserId":"7d19d226-1bd2-419b-841c-624e0fc87875","$type":"GetNoteListQuery"}
+2023-11-19 01:30:21.900 +03:00 [INF] Entity Framework Core 6.0.25 initialized 'NotesDbContext' using provider 'Microsoft.EntityFrameworkCore.Sqlite:6.0.25' with options: None
+2023-11-19 01:30:21.909 +03:00 [INF] Executed DbCommand (0ms) [Parameters=[@__request_UserId_0='?' (DbType = Guid)], CommandType='"Text"', CommandTimeout='30']
+SELECT "n"."Id", "n"."Title"
+FROM "Notes" AS "n"
+WHERE "n"."UserId" = @__request_UserId_0
+2023-11-19 01:30:21.910 +03:00 [INF] Executing OkObjectResult, writing value of type 'Notes.Application.Notes.Queries.GetNoteList.NoteListVm'.
+2023-11-19 01:30:21.910 +03:00 [INF] Executed action Notes.WebApi.Controllers.NoteController.GetAll (Notes.WebApi) in 39123.0626ms
+2023-11-19 01:30:21.910 +03:00 [INF] Executed endpoint 'Notes.WebApi.Controllers.NoteController.GetAll (Notes.WebApi)'
+2023-11-19 01:30:21.910 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7156/api/1.0/Note - - - 200 - application/json;+charset=utf-8 39124.4872ms
+2023-11-19 01:31:48.889 +03:00 [INF] Entity Framework Core 6.0.25 initialized 'NotesDbContext' using provider 'Microsoft.EntityFrameworkCore.Sqlite:6.0.25' with options: None
+2023-11-19 01:31:49.100 +03:00 [INF] Executed DbCommand (18ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT COUNT(*) FROM "sqlite_master" WHERE "type" = 'table' AND "rootpage" IS NOT NULL;
+2023-11-19 01:31:49.190 +03:00 [INF] User profile is available. Using 'C:\Users\Bulat\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2023-11-19 01:31:49.517 +03:00 [INF] Now listening on: https://localhost:7156
+2023-11-19 01:31:49.517 +03:00 [INF] Now listening on: http://localhost:5205
+2023-11-19 01:31:49.518 +03:00 [INF] Application started. Press Ctrl+C to shut down.
+2023-11-19 01:31:49.518 +03:00 [INF] Hosting environment: Development
+2023-11-19 01:31:49.518 +03:00 [INF] Content root path: C:\Users\Bulat\Desktop\Production\Notes\Notes.Backend\Notes.WebApi\
+2023-11-19 01:31:50.036 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7156/index.html - -
+2023-11-19 01:31:50.512 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7156/_framework/aspnetcore-browser-refresh.js - -
+2023-11-19 01:31:50.527 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7156/_framework/aspnetcore-browser-refresh.js - - - 200 12356 application/javascript;+charset=utf-8 13.6338ms
+2023-11-19 01:31:50.527 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7156/index.html - - - 200 - text/html;charset=utf-8 496.0533ms
+2023-11-19 01:31:50.566 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7156/_vs/browserLink - -
+2023-11-19 01:31:50.603 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7156/_vs/browserLink - - - 200 - text/javascript;+charset=UTF-8 36.6540ms
+2023-11-19 01:31:50.743 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7156/swagger/v1/swagger.json - -
+2023-11-19 01:31:50.997 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7156/swagger/v1/swagger.json - - - 200 - application/json;charset=utf-8 254.3008ms
+2023-11-19 01:31:56.954 +03:00 [INF] Request starting HTTP/2 OPTIONS https://localhost:7156/api/1.0/Note - -
+2023-11-19 01:31:56.991 +03:00 [INF] CORS policy execution successful.
+2023-11-19 01:31:56.992 +03:00 [INF] Request finished HTTP/2 OPTIONS https://localhost:7156/api/1.0/Note - - - 204 - - 38.2985ms
+2023-11-19 01:31:56.995 +03:00 [INF] Request starting HTTP/2 POST https://localhost:7156/api/1.0/Note application/json 17
+2023-11-19 01:31:57.008 +03:00 [INF] CORS policy execution successful.
+2023-11-19 01:31:57.657 +03:00 [INF] Executing endpoint 'Notes.WebApi.Controllers.NoteController.Create (Notes.WebApi)'
+2023-11-19 01:31:57.701 +03:00 [INF] Route matched with {action = "Create", controller = "Note"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[System.Guid]] Create(Notes.WebApi.Models.CreateNoteDto) on controller Notes.WebApi.Controllers.NoteController (Notes.WebApi).
+2023-11-19 01:32:10.703 +03:00 [INF] Notes Request: CreateNoteCommand "7d19d226-1bd2-419b-841c-624e0fc87875" {"UserId":"7d19d226-1bd2-419b-841c-624e0fc87875","Title":"Hello","Details":null,"$type":"CreateNoteCommand"}
+2023-11-19 01:32:13.233 +03:00 [INF] Entity Framework Core 6.0.25 initialized 'NotesDbContext' using provider 'Microsoft.EntityFrameworkCore.Sqlite:6.0.25' with options: None
+2023-11-19 01:32:13.545 +03:00 [INF] Executed DbCommand (10ms) [Parameters=[@p0='?' (DbType = Guid), @p1='?' (DbType = DateTime), @p2='?', @p3='?' (DbType = DateTime), @p4='?' (Size = 5), @p5='?' (DbType = Guid)], CommandType='"Text"', CommandTimeout='30']
+INSERT INTO "Notes" ("Id", "CreationDate", "Details", "EditDate", "Title", "UserId")
+VALUES (@p0, @p1, @p2, @p3, @p4, @p5);
+2023-11-19 01:32:13.603 +03:00 [INF] Executing OkObjectResult, writing value of type 'System.Guid'.
+2023-11-19 01:32:13.619 +03:00 [INF] Executed action Notes.WebApi.Controllers.NoteController.Create (Notes.WebApi) in 15906.8794ms
+2023-11-19 01:32:13.622 +03:00 [INF] Executed endpoint 'Notes.WebApi.Controllers.NoteController.Create (Notes.WebApi)'
+2023-11-19 01:32:13.626 +03:00 [INF] Request starting HTTP/2 OPTIONS https://localhost:7156/api/1.0/Note - -
+2023-11-19 01:32:13.626 +03:00 [INF] CORS policy execution successful.
+2023-11-19 01:32:13.627 +03:00 [INF] Request finished HTTP/2 OPTIONS https://localhost:7156/api/1.0/Note - - - 204 - - 1.6023ms
+2023-11-19 01:32:13.633 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7156/api/1.0/Note - -
+2023-11-19 01:32:13.634 +03:00 [INF] CORS policy execution successful.
+2023-11-19 01:32:13.635 +03:00 [INF] Request finished HTTP/2 POST https://localhost:7156/api/1.0/Note application/json 17 - 200 - application/json;+charset=utf-8 16639.7324ms
+2023-11-19 01:32:13.636 +03:00 [INF] Executing endpoint 'Notes.WebApi.Controllers.NoteController.GetAll (Notes.WebApi)'
+2023-11-19 01:32:13.643 +03:00 [INF] Route matched with {action = "GetAll", controller = "Note"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[Notes.Application.Notes.Queries.GetNoteList.NoteListVm]] GetAll() on controller Notes.WebApi.Controllers.NoteController (Notes.WebApi).
+2023-11-19 01:32:13.683 +03:00 [INF] Notes Request: GetNoteListQuery "7d19d226-1bd2-419b-841c-624e0fc87875" {"UserId":"7d19d226-1bd2-419b-841c-624e0fc87875","$type":"GetNoteListQuery"}
+2023-11-19 01:32:13.763 +03:00 [INF] Entity Framework Core 6.0.25 initialized 'NotesDbContext' using provider 'Microsoft.EntityFrameworkCore.Sqlite:6.0.25' with options: None
+2023-11-19 01:32:14.347 +03:00 [INF] Executed DbCommand (0ms) [Parameters=[@__request_UserId_0='?' (DbType = Guid)], CommandType='"Text"', CommandTimeout='30']
+SELECT "n"."Id", "n"."Title"
+FROM "Notes" AS "n"
+WHERE "n"."UserId" = @__request_UserId_0
+2023-11-19 01:32:14.353 +03:00 [INF] Executing OkObjectResult, writing value of type 'Notes.Application.Notes.Queries.GetNoteList.NoteListVm'.
+2023-11-19 01:32:14.358 +03:00 [INF] Executed action Notes.WebApi.Controllers.NoteController.GetAll (Notes.WebApi) in 714.9707ms
+2023-11-19 01:32:14.358 +03:00 [INF] Executed endpoint 'Notes.WebApi.Controllers.NoteController.GetAll (Notes.WebApi)'
+2023-11-19 01:32:14.359 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7156/api/1.0/Note - - - 200 - application/json;+charset=utf-8 726.2754ms
+2023-11-19 01:32:19.712 +03:00 [INF] Request starting HTTP/2 OPTIONS https://localhost:7156/api/1.0/Note - -
+2023-11-19 01:32:19.712 +03:00 [INF] CORS policy execution successful.
+2023-11-19 01:32:19.712 +03:00 [INF] Request finished HTTP/2 OPTIONS https://localhost:7156/api/1.0/Note - - - 204 - - 0.3636ms
+2023-11-19 01:32:19.714 +03:00 [INF] Request starting HTTP/2 POST https://localhost:7156/api/1.0/Note application/json 18
+2023-11-19 01:32:19.715 +03:00 [INF] CORS policy execution successful.
+2023-11-19 01:32:19.718 +03:00 [INF] Executing endpoint 'Notes.WebApi.Controllers.NoteController.Create (Notes.WebApi)'
+2023-11-19 01:32:19.718 +03:00 [INF] Route matched with {action = "Create", controller = "Note"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[System.Guid]] Create(Notes.WebApi.Models.CreateNoteDto) on controller Notes.WebApi.Controllers.NoteController (Notes.WebApi).
+2023-11-19 01:32:19.720 +03:00 [INF] Notes Request: CreateNoteCommand "7d19d226-1bd2-419b-841c-624e0fc87875" {"UserId":"7d19d226-1bd2-419b-841c-624e0fc87875","Title":"Bbdfdf","Details":null,"$type":"CreateNoteCommand"}
+2023-11-19 01:32:21.734 +03:00 [INF] Entity Framework Core 6.0.25 initialized 'NotesDbContext' using provider 'Microsoft.EntityFrameworkCore.Sqlite:6.0.25' with options: None
+2023-11-19 01:32:21.737 +03:00 [INF] Executed DbCommand (0ms) [Parameters=[@p0='?' (DbType = Guid), @p1='?' (DbType = DateTime), @p2='?', @p3='?' (DbType = DateTime), @p4='?' (Size = 6), @p5='?' (DbType = Guid)], CommandType='"Text"', CommandTimeout='30']
+INSERT INTO "Notes" ("Id", "CreationDate", "Details", "EditDate", "Title", "UserId")
+VALUES (@p0, @p1, @p2, @p3, @p4, @p5);
+2023-11-19 01:32:21.739 +03:00 [INF] Executing OkObjectResult, writing value of type 'System.Guid'.
+2023-11-19 01:32:21.740 +03:00 [INF] Executed action Notes.WebApi.Controllers.NoteController.Create (Notes.WebApi) in 2021.4784ms
+2023-11-19 01:32:21.740 +03:00 [INF] Executed endpoint 'Notes.WebApi.Controllers.NoteController.Create (Notes.WebApi)'
+2023-11-19 01:32:21.740 +03:00 [INF] Request finished HTTP/2 POST https://localhost:7156/api/1.0/Note application/json 18 - 200 - application/json;+charset=utf-8 2025.6299ms
+2023-11-19 01:32:21.746 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7156/api/1.0/Note - -
+2023-11-19 01:32:21.746 +03:00 [INF] CORS policy execution successful.
+2023-11-19 01:32:21.747 +03:00 [INF] Executing endpoint 'Notes.WebApi.Controllers.NoteController.GetAll (Notes.WebApi)'
+2023-11-19 01:32:21.747 +03:00 [INF] Route matched with {action = "GetAll", controller = "Note"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[Notes.Application.Notes.Queries.GetNoteList.NoteListVm]] GetAll() on controller Notes.WebApi.Controllers.NoteController (Notes.WebApi).
+2023-11-19 01:32:21.747 +03:00 [INF] Notes Request: GetNoteListQuery "7d19d226-1bd2-419b-841c-624e0fc87875" {"UserId":"7d19d226-1bd2-419b-841c-624e0fc87875","$type":"GetNoteListQuery"}
+2023-11-19 01:32:21.748 +03:00 [INF] Entity Framework Core 6.0.25 initialized 'NotesDbContext' using provider 'Microsoft.EntityFrameworkCore.Sqlite:6.0.25' with options: None
+2023-11-19 01:32:21.755 +03:00 [INF] Executed DbCommand (0ms) [Parameters=[@__request_UserId_0='?' (DbType = Guid)], CommandType='"Text"', CommandTimeout='30']
+SELECT "n"."Id", "n"."Title"
+FROM "Notes" AS "n"
+WHERE "n"."UserId" = @__request_UserId_0
+2023-11-19 01:32:21.755 +03:00 [INF] Executing OkObjectResult, writing value of type 'Notes.Application.Notes.Queries.GetNoteList.NoteListVm'.
+2023-11-19 01:32:21.755 +03:00 [INF] Executed action Notes.WebApi.Controllers.NoteController.GetAll (Notes.WebApi) in 8.4528ms
+2023-11-19 01:32:21.755 +03:00 [INF] Executed endpoint 'Notes.WebApi.Controllers.NoteController.GetAll (Notes.WebApi)'
+2023-11-19 01:32:21.756 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7156/api/1.0/Note - - - 200 - application/json;+charset=utf-8 9.6260ms
