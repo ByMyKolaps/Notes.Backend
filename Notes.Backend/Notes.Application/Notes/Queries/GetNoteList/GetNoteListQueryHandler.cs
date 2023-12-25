@@ -3,6 +3,7 @@ using AutoMapper.QueryableExtensions;
 using MediatR;
 using Microsoft.EntityFrameworkCore;
 using Notes.Application.Interfaces;
+using Notes.Application.Notes.Queries.GetNoteDetails;
 using System.Linq;
 using System.Threading;
 using System.Threading.Tasks;
@@ -24,7 +25,7 @@ namespace Notes.Application.Notes.Queries.GetNoteList
         {
             var entities = await _dbContext.Notes
                 .Where(note => note.UserId == request.UserId)
-                .ProjectTo<NoteLookupDto>(_mapper.ConfigurationProvider)
+                .ProjectTo<NoteDetailsVm>(_mapper.ConfigurationProvider)
                 .ToListAsync();
 
             return new NoteListVm { Notes = entities };

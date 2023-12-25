@@ -1,0 +1,323 @@
+2023-12-22 16:46:45.272 +03:00 [INF] Entity Framework Core 6.0.25 initialized 'NotesDbContext' using provider 'Microsoft.EntityFrameworkCore.Sqlite:6.0.25' with options: None
+2023-12-22 16:46:45.784 +03:00 [INF] Executed DbCommand (48ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT COUNT(*) FROM "sqlite_master" WHERE "type" = 'table' AND "rootpage" IS NOT NULL;
+2023-12-22 16:46:46.026 +03:00 [INF] User profile is available. Using 'C:\Users\Bulat\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2023-12-22 16:46:47.533 +03:00 [INF] Now listening on: https://localhost:7156
+2023-12-22 16:46:47.533 +03:00 [INF] Now listening on: http://localhost:5205
+2023-12-22 16:46:47.534 +03:00 [INF] Application started. Press Ctrl+C to shut down.
+2023-12-22 16:46:47.534 +03:00 [INF] Hosting environment: Development
+2023-12-22 16:46:47.534 +03:00 [INF] Content root path: C:\Users\Bulat\Desktop\Production\Notes\Notes.Backend\Notes.WebApi\
+2023-12-22 16:46:56.523 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7156/ - -
+2023-12-22 16:46:59.557 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7156/ - - - 301 0 - 3043.2934ms
+2023-12-22 16:47:00.312 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7156/index.html - -
+2023-12-22 16:47:02.589 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7156/index.html - - - 200 - text/html;charset=utf-8 2277.2548ms
+2023-12-22 16:47:02.649 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7156/swagger-ui.css - -
+2023-12-22 16:47:02.649 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7156/swagger-ui-bundle.js - -
+2023-12-22 16:47:02.650 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7156/_framework/aspnetcore-browser-refresh.js - -
+2023-12-22 16:47:02.671 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7156/_vs/browserLink - -
+2023-12-22 16:47:02.677 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7156/swagger-ui-standalone-preset.js - -
+2023-12-22 16:47:02.759 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7156/_framework/aspnetcore-browser-refresh.js - - - 200 12356 application/javascript;+charset=utf-8 106.2226ms
+2023-12-22 16:47:02.828 +03:00 [INF] Sending file. Request path: '/swagger-ui.css'. Physical path: 'N/A'
+2023-12-22 16:47:02.830 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7156/swagger-ui.css - - - 200 144929 text/css 181.4179ms
+2023-12-22 16:47:02.835 +03:00 [INF] Sending file. Request path: '/swagger-ui-bundle.js'. Physical path: 'N/A'
+2023-12-22 16:47:02.835 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7156/swagger-ui-bundle.js - - - 200 1061536 application/javascript 185.9456ms
+2023-12-22 16:47:02.838 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7156/_vs/browserLink - - - 200 - text/javascript;+charset=UTF-8 167.0591ms
+2023-12-22 16:47:02.852 +03:00 [INF] Sending file. Request path: '/swagger-ui-standalone-preset.js'. Physical path: 'N/A'
+2023-12-22 16:47:02.852 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7156/swagger-ui-standalone-preset.js - - - 200 312163 application/javascript 175.1525ms
+2023-12-22 16:47:03.516 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7156/swagger/v1/swagger.json - -
+2023-12-22 16:47:03.583 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7156/favicon-32x32.png - -
+2023-12-22 16:47:03.583 +03:00 [INF] Sending file. Request path: '/favicon-32x32.png'. Physical path: 'N/A'
+2023-12-22 16:47:03.583 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7156/favicon-32x32.png - - - 200 628 image/png 0.6608ms
+2023-12-22 16:47:04.333 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7156/swagger/v1/swagger.json - - - 200 - application/json;charset=utf-8 817.4073ms
+2023-12-22 19:12:13.941 +03:00 [INF] Request starting HTTP/2 OPTIONS https://localhost:7156/api/1.0/Note - -
+2023-12-22 19:12:14.062 +03:00 [INF] CORS policy execution successful.
+2023-12-22 19:12:14.067 +03:00 [INF] Request finished HTTP/2 OPTIONS https://localhost:7156/api/1.0/Note - - - 204 - - 133.9255ms
+2023-12-22 19:12:14.072 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7156/api/1.0/Note - -
+2023-12-22 19:12:14.098 +03:00 [INF] CORS policy execution successful.
+2023-12-22 19:12:16.247 +03:00 [INF] Failed to validate the token.
+Microsoft.IdentityModel.Tokens.SecurityTokenExpiredException: IDX10223: Lifetime validation failed. The token is expired. ValidTo: 'System.DateTime', Current time: 'System.DateTime'.
+   at Microsoft.IdentityModel.Tokens.Validators.ValidateLifetime(Nullable`1 notBefore, Nullable`1 expires, SecurityToken securityToken, TokenValidationParameters validationParameters)
+   at System.IdentityModel.Tokens.Jwt.JwtSecurityTokenHandler.ValidateTokenPayload(JwtSecurityToken jwtToken, TokenValidationParameters validationParameters)
+   at System.IdentityModel.Tokens.Jwt.JwtSecurityTokenHandler.ValidateToken(String token, TokenValidationParameters validationParameters, SecurityToken& validatedToken)
+   at Microsoft.AspNetCore.Authentication.JwtBearer.JwtBearerHandler.HandleAuthenticateAsync()
+2023-12-22 19:12:16.365 +03:00 [INF] Bearer was not authenticated. Failure message: IDX10223: Lifetime validation failed. The token is expired. ValidTo: 'System.DateTime', Current time: 'System.DateTime'.
+2023-12-22 19:12:16.383 +03:00 [INF] Authorization failed. These requirements were not met:
+DenyAnonymousAuthorizationRequirement: Requires an authenticated user.
+2023-12-22 19:12:16.401 +03:00 [INF] AuthenticationScheme: Bearer was challenged.
+2023-12-22 19:12:16.402 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7156/api/1.0/Note - - - 401 0 - 2330.4177ms
+2023-12-22 19:27:46.189 +03:00 [INF] Request starting HTTP/2 OPTIONS https://localhost:7156/api/1.0/Note - -
+2023-12-22 19:27:46.195 +03:00 [INF] CORS policy execution successful.
+2023-12-22 19:27:46.209 +03:00 [INF] Request finished HTTP/2 OPTIONS https://localhost:7156/api/1.0/Note - - - 204 - - 20.2158ms
+2023-12-22 19:27:46.232 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7156/api/1.0/Note - -
+2023-12-22 19:27:46.233 +03:00 [INF] CORS policy execution successful.
+2023-12-22 19:27:46.238 +03:00 [INF] Failed to validate the token.
+Microsoft.IdentityModel.Tokens.SecurityTokenExpiredException: IDX10223: Lifetime validation failed. The token is expired. ValidTo: 'System.DateTime', Current time: 'System.DateTime'.
+   at Microsoft.IdentityModel.Tokens.Validators.ValidateLifetime(Nullable`1 notBefore, Nullable`1 expires, SecurityToken securityToken, TokenValidationParameters validationParameters)
+   at System.IdentityModel.Tokens.Jwt.JwtSecurityTokenHandler.ValidateTokenPayload(JwtSecurityToken jwtToken, TokenValidationParameters validationParameters)
+   at System.IdentityModel.Tokens.Jwt.JwtSecurityTokenHandler.ValidateToken(String token, TokenValidationParameters validationParameters, SecurityToken& validatedToken)
+   at Microsoft.AspNetCore.Authentication.JwtBearer.JwtBearerHandler.HandleAuthenticateAsync()
+2023-12-22 19:27:46.238 +03:00 [INF] Bearer was not authenticated. Failure message: IDX10223: Lifetime validation failed. The token is expired. ValidTo: 'System.DateTime', Current time: 'System.DateTime'.
+2023-12-22 19:27:46.240 +03:00 [INF] Authorization failed. These requirements were not met:
+DenyAnonymousAuthorizationRequirement: Requires an authenticated user.
+2023-12-22 19:27:46.241 +03:00 [INF] AuthenticationScheme: Bearer was challenged.
+2023-12-22 19:27:46.241 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7156/api/1.0/Note - - - 401 0 - 8.8180ms
+2023-12-22 19:57:52.842 +03:00 [INF] Request starting HTTP/2 OPTIONS https://localhost:7156/api/1.0/Note - -
+2023-12-22 19:57:52.843 +03:00 [INF] CORS policy execution successful.
+2023-12-22 19:57:52.873 +03:00 [INF] Request finished HTTP/2 OPTIONS https://localhost:7156/api/1.0/Note - - - 204 - - 20.6655ms
+2023-12-22 19:57:52.882 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7156/api/1.0/Note - -
+2023-12-22 19:57:52.883 +03:00 [INF] CORS policy execution successful.
+2023-12-22 19:57:53.080 +03:00 [INF] Executing endpoint 'Notes.WebApi.Controllers.NoteController.GetAll (Notes.WebApi)'
+2023-12-22 19:57:53.127 +03:00 [INF] Route matched with {action = "GetAll", controller = "Note"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[Notes.Application.Notes.Queries.GetNoteList.NoteListVm]] GetAll() on controller Notes.WebApi.Controllers.NoteController (Notes.WebApi).
+2023-12-22 19:57:53.616 +03:00 [INF] Notes Request: GetNoteListQuery "7d19d226-1bd2-419b-841c-624e0fc87875" {"UserId":"7d19d226-1bd2-419b-841c-624e0fc87875","$type":"GetNoteListQuery"}
+2023-12-22 19:57:53.673 +03:00 [INF] Entity Framework Core 6.0.25 initialized 'NotesDbContext' using provider 'Microsoft.EntityFrameworkCore.Sqlite:6.0.25' with options: None
+2023-12-22 19:57:54.607 +03:00 [INF] Executed DbCommand (26ms) [Parameters=[@__request_UserId_0='?' (DbType = Guid)], CommandType='"Text"', CommandTimeout='30']
+SELECT "n"."Id", "n"."Title"
+FROM "Notes" AS "n"
+WHERE "n"."UserId" = @__request_UserId_0
+2023-12-22 19:57:54.663 +03:00 [INF] Executing OkObjectResult, writing value of type 'Notes.Application.Notes.Queries.GetNoteList.NoteListVm'.
+2023-12-22 19:57:54.685 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7156/api/1.0/Note - -
+2023-12-22 19:57:54.685 +03:00 [INF] CORS policy execution successful.
+2023-12-22 19:57:54.687 +03:00 [INF] Executing endpoint 'Notes.WebApi.Controllers.NoteController.GetAll (Notes.WebApi)'
+2023-12-22 19:57:54.688 +03:00 [INF] Route matched with {action = "GetAll", controller = "Note"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[Notes.Application.Notes.Queries.GetNoteList.NoteListVm]] GetAll() on controller Notes.WebApi.Controllers.NoteController (Notes.WebApi).
+2023-12-22 19:57:54.690 +03:00 [INF] Notes Request: GetNoteListQuery "7d19d226-1bd2-419b-841c-624e0fc87875" {"UserId":"7d19d226-1bd2-419b-841c-624e0fc87875","$type":"GetNoteListQuery"}
+2023-12-22 19:57:54.693 +03:00 [INF] Executed action Notes.WebApi.Controllers.NoteController.GetAll (Notes.WebApi) in 1552.473ms
+2023-12-22 19:57:54.695 +03:00 [INF] Executed endpoint 'Notes.WebApi.Controllers.NoteController.GetAll (Notes.WebApi)'
+2023-12-22 19:57:54.710 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7156/api/1.0/Note - - - 200 - application/json;+charset=utf-8 1827.9554ms
+2023-12-22 19:57:54.940 +03:00 [INF] Entity Framework Core 6.0.25 initialized 'NotesDbContext' using provider 'Microsoft.EntityFrameworkCore.Sqlite:6.0.25' with options: None
+2023-12-22 19:57:54.974 +03:00 [INF] Executed DbCommand (0ms) [Parameters=[@__request_UserId_0='?' (DbType = Guid)], CommandType='"Text"', CommandTimeout='30']
+SELECT "n"."Id", "n"."Title"
+FROM "Notes" AS "n"
+WHERE "n"."UserId" = @__request_UserId_0
+2023-12-22 19:57:54.977 +03:00 [INF] Executing OkObjectResult, writing value of type 'Notes.Application.Notes.Queries.GetNoteList.NoteListVm'.
+2023-12-22 19:57:54.979 +03:00 [INF] Executed action Notes.WebApi.Controllers.NoteController.GetAll (Notes.WebApi) in 290.9799ms
+2023-12-22 19:57:54.979 +03:00 [INF] Executed endpoint 'Notes.WebApi.Controllers.NoteController.GetAll (Notes.WebApi)'
+2023-12-22 19:57:54.980 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7156/api/1.0/Note - - - 200 - application/json;+charset=utf-8 295.2651ms
+2023-12-22 19:57:54.993 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7156/api/1.0/Note - -
+2023-12-22 19:57:54.994 +03:00 [INF] CORS policy execution successful.
+2023-12-22 19:57:55.014 +03:00 [INF] Executing endpoint 'Notes.WebApi.Controllers.NoteController.GetAll (Notes.WebApi)'
+2023-12-22 19:57:55.015 +03:00 [INF] Route matched with {action = "GetAll", controller = "Note"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[Notes.Application.Notes.Queries.GetNoteList.NoteListVm]] GetAll() on controller Notes.WebApi.Controllers.NoteController (Notes.WebApi).
+2023-12-22 19:57:55.036 +03:00 [INF] Notes Request: GetNoteListQuery "7d19d226-1bd2-419b-841c-624e0fc87875" {"UserId":"7d19d226-1bd2-419b-841c-624e0fc87875","$type":"GetNoteListQuery"}
+2023-12-22 19:57:55.041 +03:00 [INF] Entity Framework Core 6.0.25 initialized 'NotesDbContext' using provider 'Microsoft.EntityFrameworkCore.Sqlite:6.0.25' with options: None
+2023-12-22 19:57:55.045 +03:00 [INF] Executed DbCommand (0ms) [Parameters=[@__request_UserId_0='?' (DbType = Guid)], CommandType='"Text"', CommandTimeout='30']
+SELECT "n"."Id", "n"."Title"
+FROM "Notes" AS "n"
+WHERE "n"."UserId" = @__request_UserId_0
+2023-12-22 19:57:55.046 +03:00 [INF] Executing OkObjectResult, writing value of type 'Notes.Application.Notes.Queries.GetNoteList.NoteListVm'.
+2023-12-22 19:57:55.047 +03:00 [INF] Executed action Notes.WebApi.Controllers.NoteController.GetAll (Notes.WebApi) in 18.6275ms
+2023-12-22 19:57:55.047 +03:00 [INF] Executed endpoint 'Notes.WebApi.Controllers.NoteController.GetAll (Notes.WebApi)'
+2023-12-22 19:57:55.048 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7156/api/1.0/Note - - - 200 - application/json;+charset=utf-8 58.1554ms
+2023-12-22 19:58:00.001 +03:00 [INF] Request starting HTTP/2 OPTIONS https://localhost:7156/api/1.0/Note - -
+2023-12-22 19:58:00.002 +03:00 [INF] CORS policy execution successful.
+2023-12-22 19:58:00.003 +03:00 [INF] Request finished HTTP/2 OPTIONS https://localhost:7156/api/1.0/Note - - - 204 - - 1.4073ms
+2023-12-22 19:58:00.021 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7156/api/1.0/Note - -
+2023-12-22 19:58:00.021 +03:00 [INF] CORS policy execution successful.
+2023-12-22 19:58:00.023 +03:00 [INF] Authorization failed. These requirements were not met:
+DenyAnonymousAuthorizationRequirement: Requires an authenticated user.
+2023-12-22 19:58:00.023 +03:00 [INF] AuthenticationScheme: Bearer was challenged.
+2023-12-22 19:58:00.024 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7156/api/1.0/Note - - - 401 0 - 3.0370ms
+2023-12-22 20:01:05.649 +03:00 [INF] Request starting HTTP/2 OPTIONS https://localhost:7156/api/1.0/Note - -
+2023-12-22 20:01:05.665 +03:00 [INF] CORS policy execution successful.
+2023-12-22 20:01:05.670 +03:00 [INF] Request finished HTTP/2 OPTIONS https://localhost:7156/api/1.0/Note - - - 204 - - 21.2562ms
+2023-12-22 20:01:05.686 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7156/api/1.0/Note - -
+2023-12-22 20:01:05.687 +03:00 [INF] CORS policy execution successful.
+2023-12-22 20:01:05.689 +03:00 [INF] Executing endpoint 'Notes.WebApi.Controllers.NoteController.GetAll (Notes.WebApi)'
+2023-12-22 20:01:05.690 +03:00 [INF] Route matched with {action = "GetAll", controller = "Note"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[Notes.Application.Notes.Queries.GetNoteList.NoteListVm]] GetAll() on controller Notes.WebApi.Controllers.NoteController (Notes.WebApi).
+2023-12-22 20:01:05.691 +03:00 [INF] Notes Request: GetNoteListQuery "7d19d226-1bd2-419b-841c-624e0fc87875" {"UserId":"7d19d226-1bd2-419b-841c-624e0fc87875","$type":"GetNoteListQuery"}
+2023-12-22 20:01:05.693 +03:00 [INF] Entity Framework Core 6.0.25 initialized 'NotesDbContext' using provider 'Microsoft.EntityFrameworkCore.Sqlite:6.0.25' with options: None
+2023-12-22 20:01:05.695 +03:00 [INF] Executed DbCommand (0ms) [Parameters=[@__request_UserId_0='?' (DbType = Guid)], CommandType='"Text"', CommandTimeout='30']
+SELECT "n"."Id", "n"."Title"
+FROM "Notes" AS "n"
+WHERE "n"."UserId" = @__request_UserId_0
+2023-12-22 20:01:05.697 +03:00 [INF] Executing OkObjectResult, writing value of type 'Notes.Application.Notes.Queries.GetNoteList.NoteListVm'.
+2023-12-22 20:01:05.698 +03:00 [INF] Executed action Notes.WebApi.Controllers.NoteController.GetAll (Notes.WebApi) in 7.6634ms
+2023-12-22 20:01:05.698 +03:00 [INF] Executed endpoint 'Notes.WebApi.Controllers.NoteController.GetAll (Notes.WebApi)'
+2023-12-22 20:01:05.699 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7156/api/1.0/Note - - - 200 - application/json;+charset=utf-8 12.3591ms
+2023-12-22 20:01:13.324 +03:00 [INF] Request starting HTTP/2 OPTIONS https://localhost:7156/api/1.0/Note - -
+2023-12-22 20:01:13.325 +03:00 [INF] CORS policy execution successful.
+2023-12-22 20:01:13.325 +03:00 [INF] Request finished HTTP/2 OPTIONS https://localhost:7156/api/1.0/Note - - - 204 - - 1.0156ms
+2023-12-22 20:01:13.332 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7156/api/1.0/Note - -
+2023-12-22 20:01:13.333 +03:00 [INF] CORS policy execution successful.
+2023-12-22 20:01:13.334 +03:00 [INF] Executing endpoint 'Notes.WebApi.Controllers.NoteController.GetAll (Notes.WebApi)'
+2023-12-22 20:01:13.334 +03:00 [INF] Route matched with {action = "GetAll", controller = "Note"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[Notes.Application.Notes.Queries.GetNoteList.NoteListVm]] GetAll() on controller Notes.WebApi.Controllers.NoteController (Notes.WebApi).
+2023-12-22 20:01:13.335 +03:00 [INF] Notes Request: GetNoteListQuery "7d19d226-1bd2-419b-841c-624e0fc87875" {"UserId":"7d19d226-1bd2-419b-841c-624e0fc87875","$type":"GetNoteListQuery"}
+2023-12-22 20:01:13.336 +03:00 [INF] Entity Framework Core 6.0.25 initialized 'NotesDbContext' using provider 'Microsoft.EntityFrameworkCore.Sqlite:6.0.25' with options: None
+2023-12-22 20:01:13.337 +03:00 [INF] Executed DbCommand (0ms) [Parameters=[@__request_UserId_0='?' (DbType = Guid)], CommandType='"Text"', CommandTimeout='30']
+SELECT "n"."Id", "n"."Title"
+FROM "Notes" AS "n"
+WHERE "n"."UserId" = @__request_UserId_0
+2023-12-22 20:01:13.337 +03:00 [INF] Executing OkObjectResult, writing value of type 'Notes.Application.Notes.Queries.GetNoteList.NoteListVm'.
+2023-12-22 20:01:13.338 +03:00 [INF] Executed action Notes.WebApi.Controllers.NoteController.GetAll (Notes.WebApi) in 3.3656ms
+2023-12-22 20:01:13.338 +03:00 [INF] Executed endpoint 'Notes.WebApi.Controllers.NoteController.GetAll (Notes.WebApi)'
+2023-12-22 20:01:13.338 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7156/api/1.0/Note - - - 200 - application/json;+charset=utf-8 6.1326ms
+2023-12-22 20:01:22.046 +03:00 [INF] Request starting HTTP/2 OPTIONS https://localhost:7156/api/1.0/Note - -
+2023-12-22 20:01:22.047 +03:00 [INF] CORS policy execution successful.
+2023-12-22 20:01:22.047 +03:00 [INF] Request finished HTTP/2 OPTIONS https://localhost:7156/api/1.0/Note - - - 204 - - 0.7842ms
+2023-12-22 20:01:22.058 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7156/api/1.0/Note - -
+2023-12-22 20:01:22.065 +03:00 [INF] CORS policy execution successful.
+2023-12-22 20:01:22.081 +03:00 [INF] Executing endpoint 'Notes.WebApi.Controllers.NoteController.GetAll (Notes.WebApi)'
+2023-12-22 20:01:22.083 +03:00 [INF] Route matched with {action = "GetAll", controller = "Note"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[Notes.Application.Notes.Queries.GetNoteList.NoteListVm]] GetAll() on controller Notes.WebApi.Controllers.NoteController (Notes.WebApi).
+2023-12-22 20:01:22.092 +03:00 [INF] Notes Request: GetNoteListQuery "7d19d226-1bd2-419b-841c-624e0fc87875" {"UserId":"7d19d226-1bd2-419b-841c-624e0fc87875","$type":"GetNoteListQuery"}
+2023-12-22 20:01:22.094 +03:00 [INF] Entity Framework Core 6.0.25 initialized 'NotesDbContext' using provider 'Microsoft.EntityFrameworkCore.Sqlite:6.0.25' with options: None
+2023-12-22 20:01:22.096 +03:00 [INF] Executed DbCommand (0ms) [Parameters=[@__request_UserId_0='?' (DbType = Guid)], CommandType='"Text"', CommandTimeout='30']
+SELECT "n"."Id", "n"."Title"
+FROM "Notes" AS "n"
+WHERE "n"."UserId" = @__request_UserId_0
+2023-12-22 20:01:22.097 +03:00 [INF] Executing OkObjectResult, writing value of type 'Notes.Application.Notes.Queries.GetNoteList.NoteListVm'.
+2023-12-22 20:01:22.097 +03:00 [INF] Executed action Notes.WebApi.Controllers.NoteController.GetAll (Notes.WebApi) in 11.769ms
+2023-12-22 20:01:22.098 +03:00 [INF] Executed endpoint 'Notes.WebApi.Controllers.NoteController.GetAll (Notes.WebApi)'
+2023-12-22 20:01:22.098 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7156/api/1.0/Note - - - 200 - application/json;+charset=utf-8 40.2563ms
+2023-12-22 20:02:16.004 +03:00 [INF] Request starting HTTP/2 OPTIONS https://localhost:7156/api/1.0/Note - -
+2023-12-22 20:02:16.004 +03:00 [INF] CORS policy execution successful.
+2023-12-22 20:02:16.017 +03:00 [INF] Request finished HTTP/2 OPTIONS https://localhost:7156/api/1.0/Note - - - 204 - - 7.3158ms
+2023-12-22 20:02:16.090 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7156/api/1.0/Note - -
+2023-12-22 20:02:16.090 +03:00 [INF] CORS policy execution successful.
+2023-12-22 20:02:16.091 +03:00 [INF] Authorization failed. These requirements were not met:
+DenyAnonymousAuthorizationRequirement: Requires an authenticated user.
+2023-12-22 20:02:16.091 +03:00 [INF] AuthenticationScheme: Bearer was challenged.
+2023-12-22 20:02:16.091 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7156/api/1.0/Note - - - 401 0 - 1.4304ms
+2023-12-22 20:03:40.432 +03:00 [INF] Request starting HTTP/2 OPTIONS https://localhost:7156/api/1.0/Note - -
+2023-12-22 20:03:40.449 +03:00 [INF] CORS policy execution successful.
+2023-12-22 20:03:40.459 +03:00 [INF] Request finished HTTP/2 OPTIONS https://localhost:7156/api/1.0/Note - - - 204 - - 32.7856ms
+2023-12-22 20:03:40.475 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7156/api/1.0/Note - -
+2023-12-22 20:03:40.476 +03:00 [INF] CORS policy execution successful.
+2023-12-22 20:03:40.476 +03:00 [INF] Authorization failed. These requirements were not met:
+DenyAnonymousAuthorizationRequirement: Requires an authenticated user.
+2023-12-22 20:03:40.477 +03:00 [INF] AuthenticationScheme: Bearer was challenged.
+2023-12-22 20:03:40.477 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7156/api/1.0/Note - - - 401 0 - 2.5642ms
+2023-12-22 20:28:26.791 +03:00 [INF] Request starting HTTP/2 OPTIONS https://localhost:7156/api/1.0/Note - -
+2023-12-22 20:28:26.791 +03:00 [INF] CORS policy execution successful.
+2023-12-22 20:28:26.791 +03:00 [INF] Request finished HTTP/2 OPTIONS https://localhost:7156/api/1.0/Note - - - 204 - - 13.1883ms
+2023-12-22 20:28:26.822 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7156/api/1.0/Note - -
+2023-12-22 20:28:26.822 +03:00 [INF] CORS policy execution successful.
+2023-12-22 20:28:26.822 +03:00 [INF] Authorization failed. These requirements were not met:
+DenyAnonymousAuthorizationRequirement: Requires an authenticated user.
+2023-12-22 20:28:26.822 +03:00 [INF] AuthenticationScheme: Bearer was challenged.
+2023-12-22 20:28:26.822 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7156/api/1.0/Note - - - 401 0 - 0.7182ms
+2023-12-22 20:29:01.141 +03:00 [INF] Request starting HTTP/2 OPTIONS https://localhost:7156/api/1.0/Note - -
+2023-12-22 20:29:01.142 +03:00 [INF] CORS policy execution successful.
+2023-12-22 20:29:01.143 +03:00 [INF] Request finished HTTP/2 OPTIONS https://localhost:7156/api/1.0/Note - - - 204 - - 1.6350ms
+2023-12-22 20:29:01.151 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7156/api/1.0/Note - -
+2023-12-22 20:29:01.152 +03:00 [INF] CORS policy execution successful.
+2023-12-22 20:29:01.152 +03:00 [INF] Authorization failed. These requirements were not met:
+DenyAnonymousAuthorizationRequirement: Requires an authenticated user.
+2023-12-22 20:29:01.152 +03:00 [INF] AuthenticationScheme: Bearer was challenged.
+2023-12-22 20:29:01.152 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7156/api/1.0/Note - - - 401 0 - 0.7823ms
+2023-12-22 20:31:49.351 +03:00 [INF] Request starting HTTP/2 OPTIONS https://localhost:7156/api/1.0/Note - -
+2023-12-22 20:31:49.356 +03:00 [INF] CORS policy execution successful.
+2023-12-22 20:31:49.362 +03:00 [INF] Request finished HTTP/2 OPTIONS https://localhost:7156/api/1.0/Note - - - 204 - - 16.4498ms
+2023-12-22 20:31:49.367 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7156/api/1.0/Note - -
+2023-12-22 20:31:49.367 +03:00 [INF] CORS policy execution successful.
+2023-12-22 20:31:49.368 +03:00 [INF] Executing endpoint 'Notes.WebApi.Controllers.NoteController.GetAll (Notes.WebApi)'
+2023-12-22 20:31:49.368 +03:00 [INF] Route matched with {action = "GetAll", controller = "Note"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[Notes.Application.Notes.Queries.GetNoteList.NoteListVm]] GetAll() on controller Notes.WebApi.Controllers.NoteController (Notes.WebApi).
+2023-12-22 20:31:49.369 +03:00 [INF] Notes Request: GetNoteListQuery "7d19d226-1bd2-419b-841c-624e0fc87875" {"UserId":"7d19d226-1bd2-419b-841c-624e0fc87875","$type":"GetNoteListQuery"}
+2023-12-22 20:31:49.370 +03:00 [INF] Entity Framework Core 6.0.25 initialized 'NotesDbContext' using provider 'Microsoft.EntityFrameworkCore.Sqlite:6.0.25' with options: None
+2023-12-22 20:31:49.374 +03:00 [INF] Executed DbCommand (3ms) [Parameters=[@__request_UserId_0='?' (DbType = Guid)], CommandType='"Text"', CommandTimeout='30']
+SELECT "n"."Id", "n"."Title"
+FROM "Notes" AS "n"
+WHERE "n"."UserId" = @__request_UserId_0
+2023-12-22 20:31:49.375 +03:00 [INF] Executing OkObjectResult, writing value of type 'Notes.Application.Notes.Queries.GetNoteList.NoteListVm'.
+2023-12-22 20:31:49.375 +03:00 [INF] Executed action Notes.WebApi.Controllers.NoteController.GetAll (Notes.WebApi) in 6.9338ms
+2023-12-22 20:31:49.375 +03:00 [INF] Executed endpoint 'Notes.WebApi.Controllers.NoteController.GetAll (Notes.WebApi)'
+2023-12-22 20:31:49.376 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7156/api/1.0/Note - - - 200 - application/json;+charset=utf-8 8.9152ms
+2023-12-22 20:31:56.211 +03:00 [INF] Request starting HTTP/2 OPTIONS https://localhost:7156/api/1.0/Note - -
+2023-12-22 20:31:56.211 +03:00 [INF] CORS policy execution successful.
+2023-12-22 20:31:56.211 +03:00 [INF] Request finished HTTP/2 OPTIONS https://localhost:7156/api/1.0/Note - - - 204 - - 0.7713ms
+2023-12-22 20:31:56.217 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7156/api/1.0/Note - -
+2023-12-22 20:31:56.217 +03:00 [INF] CORS policy execution successful.
+2023-12-22 20:31:56.218 +03:00 [INF] Executing endpoint 'Notes.WebApi.Controllers.NoteController.GetAll (Notes.WebApi)'
+2023-12-22 20:31:56.218 +03:00 [INF] Route matched with {action = "GetAll", controller = "Note"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[Notes.Application.Notes.Queries.GetNoteList.NoteListVm]] GetAll() on controller Notes.WebApi.Controllers.NoteController (Notes.WebApi).
+2023-12-22 20:31:56.218 +03:00 [INF] Notes Request: GetNoteListQuery "7d19d226-1bd2-419b-841c-624e0fc87875" {"UserId":"7d19d226-1bd2-419b-841c-624e0fc87875","$type":"GetNoteListQuery"}
+2023-12-22 20:31:56.219 +03:00 [INF] Entity Framework Core 6.0.25 initialized 'NotesDbContext' using provider 'Microsoft.EntityFrameworkCore.Sqlite:6.0.25' with options: None
+2023-12-22 20:31:56.220 +03:00 [INF] Executed DbCommand (0ms) [Parameters=[@__request_UserId_0='?' (DbType = Guid)], CommandType='"Text"', CommandTimeout='30']
+SELECT "n"."Id", "n"."Title"
+FROM "Notes" AS "n"
+WHERE "n"."UserId" = @__request_UserId_0
+2023-12-22 20:31:56.220 +03:00 [INF] Executing OkObjectResult, writing value of type 'Notes.Application.Notes.Queries.GetNoteList.NoteListVm'.
+2023-12-22 20:31:56.220 +03:00 [INF] Executed action Notes.WebApi.Controllers.NoteController.GetAll (Notes.WebApi) in 2.0406ms
+2023-12-22 20:31:56.220 +03:00 [INF] Executed endpoint 'Notes.WebApi.Controllers.NoteController.GetAll (Notes.WebApi)'
+2023-12-22 20:31:56.220 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7156/api/1.0/Note - - - 200 - application/json;+charset=utf-8 3.9120ms
+2023-12-22 20:32:03.951 +03:00 [INF] Request starting HTTP/2 OPTIONS https://localhost:7156/api/1.0/Note - -
+2023-12-22 20:32:03.951 +03:00 [INF] CORS policy execution successful.
+2023-12-22 20:32:03.951 +03:00 [INF] Request finished HTTP/2 OPTIONS https://localhost:7156/api/1.0/Note - - - 204 - - 0.5900ms
+2023-12-22 20:32:03.955 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7156/api/1.0/Note - -
+2023-12-22 20:32:03.955 +03:00 [INF] CORS policy execution successful.
+2023-12-22 20:32:03.956 +03:00 [INF] Executing endpoint 'Notes.WebApi.Controllers.NoteController.GetAll (Notes.WebApi)'
+2023-12-22 20:32:03.956 +03:00 [INF] Route matched with {action = "GetAll", controller = "Note"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[Notes.Application.Notes.Queries.GetNoteList.NoteListVm]] GetAll() on controller Notes.WebApi.Controllers.NoteController (Notes.WebApi).
+2023-12-22 20:32:03.956 +03:00 [INF] Notes Request: GetNoteListQuery "7d19d226-1bd2-419b-841c-624e0fc87875" {"UserId":"7d19d226-1bd2-419b-841c-624e0fc87875","$type":"GetNoteListQuery"}
+2023-12-22 20:32:03.957 +03:00 [INF] Entity Framework Core 6.0.25 initialized 'NotesDbContext' using provider 'Microsoft.EntityFrameworkCore.Sqlite:6.0.25' with options: None
+2023-12-22 20:32:03.958 +03:00 [INF] Executed DbCommand (0ms) [Parameters=[@__request_UserId_0='?' (DbType = Guid)], CommandType='"Text"', CommandTimeout='30']
+SELECT "n"."Id", "n"."Title"
+FROM "Notes" AS "n"
+WHERE "n"."UserId" = @__request_UserId_0
+2023-12-22 20:32:03.959 +03:00 [INF] Executing OkObjectResult, writing value of type 'Notes.Application.Notes.Queries.GetNoteList.NoteListVm'.
+2023-12-22 20:32:03.959 +03:00 [INF] Executed action Notes.WebApi.Controllers.NoteController.GetAll (Notes.WebApi) in 3.1364ms
+2023-12-22 20:32:03.959 +03:00 [INF] Executed endpoint 'Notes.WebApi.Controllers.NoteController.GetAll (Notes.WebApi)'
+2023-12-22 20:32:03.960 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7156/api/1.0/Note - - - 200 - application/json;+charset=utf-8 5.1034ms
+2023-12-22 20:41:08.398 +03:00 [INF] Request starting HTTP/2 OPTIONS https://localhost:7156/api/1.0/Note - -
+2023-12-22 20:41:08.398 +03:00 [INF] CORS policy execution successful.
+2023-12-22 20:41:08.399 +03:00 [INF] Request finished HTTP/2 OPTIONS https://localhost:7156/api/1.0/Note - - - 204 - - 2.2392ms
+2023-12-22 20:41:08.414 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7156/api/1.0/Note - -
+2023-12-22 20:41:08.414 +03:00 [INF] CORS policy execution successful.
+2023-12-22 20:41:08.414 +03:00 [INF] Executing endpoint 'Notes.WebApi.Controllers.NoteController.GetAll (Notes.WebApi)'
+2023-12-22 20:41:08.414 +03:00 [INF] Route matched with {action = "GetAll", controller = "Note"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[Notes.Application.Notes.Queries.GetNoteList.NoteListVm]] GetAll() on controller Notes.WebApi.Controllers.NoteController (Notes.WebApi).
+2023-12-22 20:41:08.415 +03:00 [INF] Notes Request: GetNoteListQuery "7d19d226-1bd2-419b-841c-624e0fc87875" {"UserId":"7d19d226-1bd2-419b-841c-624e0fc87875","$type":"GetNoteListQuery"}
+2023-12-22 20:41:08.416 +03:00 [INF] Entity Framework Core 6.0.25 initialized 'NotesDbContext' using provider 'Microsoft.EntityFrameworkCore.Sqlite:6.0.25' with options: None
+2023-12-22 20:41:08.420 +03:00 [INF] Executed DbCommand (3ms) [Parameters=[@__request_UserId_0='?' (DbType = Guid)], CommandType='"Text"', CommandTimeout='30']
+SELECT "n"."Id", "n"."Title"
+FROM "Notes" AS "n"
+WHERE "n"."UserId" = @__request_UserId_0
+2023-12-22 20:41:08.420 +03:00 [INF] Executing OkObjectResult, writing value of type 'Notes.Application.Notes.Queries.GetNoteList.NoteListVm'.
+2023-12-22 20:41:08.421 +03:00 [INF] Executed action Notes.WebApi.Controllers.NoteController.GetAll (Notes.WebApi) in 6.0699ms
+2023-12-22 20:41:08.421 +03:00 [INF] Executed endpoint 'Notes.WebApi.Controllers.NoteController.GetAll (Notes.WebApi)'
+2023-12-22 20:41:08.421 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7156/api/1.0/Note - - - 200 - application/json;+charset=utf-8 7.5957ms
+2023-12-22 20:49:03.186 +03:00 [INF] Request starting HTTP/2 OPTIONS https://localhost:7156/api/1.0/Note - -
+2023-12-22 20:49:03.188 +03:00 [INF] CORS policy execution successful.
+2023-12-22 20:49:03.190 +03:00 [INF] Request finished HTTP/2 OPTIONS https://localhost:7156/api/1.0/Note - - - 204 - - 2.8789ms
+2023-12-22 20:49:03.236 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7156/api/1.0/Note - -
+2023-12-22 20:49:03.238 +03:00 [INF] CORS policy execution successful.
+2023-12-22 20:49:03.239 +03:00 [INF] Executing endpoint 'Notes.WebApi.Controllers.NoteController.GetAll (Notes.WebApi)'
+2023-12-22 20:49:03.239 +03:00 [INF] Route matched with {action = "GetAll", controller = "Note"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[Notes.Application.Notes.Queries.GetNoteList.NoteListVm]] GetAll() on controller Notes.WebApi.Controllers.NoteController (Notes.WebApi).
+2023-12-22 20:49:03.239 +03:00 [INF] Notes Request: GetNoteListQuery "7d19d226-1bd2-419b-841c-624e0fc87875" {"UserId":"7d19d226-1bd2-419b-841c-624e0fc87875","$type":"GetNoteListQuery"}
+2023-12-22 20:49:03.240 +03:00 [INF] Entity Framework Core 6.0.25 initialized 'NotesDbContext' using provider 'Microsoft.EntityFrameworkCore.Sqlite:6.0.25' with options: None
+2023-12-22 20:49:03.244 +03:00 [INF] Executed DbCommand (3ms) [Parameters=[@__request_UserId_0='?' (DbType = Guid)], CommandType='"Text"', CommandTimeout='30']
+SELECT "n"."Id", "n"."Title"
+FROM "Notes" AS "n"
+WHERE "n"."UserId" = @__request_UserId_0
+2023-12-22 20:49:03.244 +03:00 [INF] Executing OkObjectResult, writing value of type 'Notes.Application.Notes.Queries.GetNoteList.NoteListVm'.
+2023-12-22 20:49:03.244 +03:00 [INF] Executed action Notes.WebApi.Controllers.NoteController.GetAll (Notes.WebApi) in 5.2025ms
+2023-12-22 20:49:03.244 +03:00 [INF] Executed endpoint 'Notes.WebApi.Controllers.NoteController.GetAll (Notes.WebApi)'
+2023-12-22 20:49:03.244 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7156/api/1.0/Note - - - 200 - application/json;+charset=utf-8 35.6196ms
+2023-12-22 20:51:43.887 +03:00 [INF] Request starting HTTP/2 OPTIONS https://localhost:7156/api/1.0/Note - -
+2023-12-22 20:51:43.888 +03:00 [INF] CORS policy execution successful.
+2023-12-22 20:51:43.890 +03:00 [INF] Request finished HTTP/2 OPTIONS https://localhost:7156/api/1.0/Note - - - 204 - - 2.5507ms
+2023-12-22 20:51:43.901 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7156/api/1.0/Note - -
+2023-12-22 20:51:43.903 +03:00 [INF] CORS policy execution successful.
+2023-12-22 20:51:43.904 +03:00 [INF] Executing endpoint 'Notes.WebApi.Controllers.NoteController.GetAll (Notes.WebApi)'
+2023-12-22 20:51:43.904 +03:00 [INF] Route matched with {action = "GetAll", controller = "Note"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[Notes.Application.Notes.Queries.GetNoteList.NoteListVm]] GetAll() on controller Notes.WebApi.Controllers.NoteController (Notes.WebApi).
+2023-12-22 20:51:43.904 +03:00 [INF] Notes Request: GetNoteListQuery "7d19d226-1bd2-419b-841c-624e0fc87875" {"UserId":"7d19d226-1bd2-419b-841c-624e0fc87875","$type":"GetNoteListQuery"}
+2023-12-22 20:51:43.905 +03:00 [INF] Entity Framework Core 6.0.25 initialized 'NotesDbContext' using provider 'Microsoft.EntityFrameworkCore.Sqlite:6.0.25' with options: None
+2023-12-22 20:51:43.906 +03:00 [INF] Executed DbCommand (0ms) [Parameters=[@__request_UserId_0='?' (DbType = Guid)], CommandType='"Text"', CommandTimeout='30']
+SELECT "n"."Id", "n"."Title"
+FROM "Notes" AS "n"
+WHERE "n"."UserId" = @__request_UserId_0
+2023-12-22 20:51:43.906 +03:00 [INF] Executing OkObjectResult, writing value of type 'Notes.Application.Notes.Queries.GetNoteList.NoteListVm'.
+2023-12-22 20:51:43.907 +03:00 [INF] Executed action Notes.WebApi.Controllers.NoteController.GetAll (Notes.WebApi) in 2.7443ms
+2023-12-22 20:51:43.907 +03:00 [INF] Executed endpoint 'Notes.WebApi.Controllers.NoteController.GetAll (Notes.WebApi)'
+2023-12-22 20:51:43.907 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7156/api/1.0/Note - - - 200 - application/json;+charset=utf-8 6.3233ms
+2023-12-22 20:56:23.183 +03:00 [INF] Request starting HTTP/2 OPTIONS https://localhost:7156/api/1.0/Note - -
+2023-12-22 20:56:23.188 +03:00 [INF] CORS policy execution successful.
+2023-12-22 20:56:23.192 +03:00 [INF] Request finished HTTP/2 OPTIONS https://localhost:7156/api/1.0/Note - - - 204 - - 7.3526ms
+2023-12-22 20:56:23.207 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7156/api/1.0/Note - -
+2023-12-22 20:56:23.209 +03:00 [INF] CORS policy execution successful.
+2023-12-22 20:56:23.210 +03:00 [INF] Executing endpoint 'Notes.WebApi.Controllers.NoteController.GetAll (Notes.WebApi)'
+2023-12-22 20:56:23.211 +03:00 [INF] Route matched with {action = "GetAll", controller = "Note"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[Notes.Application.Notes.Queries.GetNoteList.NoteListVm]] GetAll() on controller Notes.WebApi.Controllers.NoteController (Notes.WebApi).
+2023-12-22 20:56:23.211 +03:00 [INF] Notes Request: GetNoteListQuery "7d19d226-1bd2-419b-841c-624e0fc87875" {"UserId":"7d19d226-1bd2-419b-841c-624e0fc87875","$type":"GetNoteListQuery"}
+2023-12-22 20:56:23.213 +03:00 [INF] Entity Framework Core 6.0.25 initialized 'NotesDbContext' using provider 'Microsoft.EntityFrameworkCore.Sqlite:6.0.25' with options: None
+2023-12-22 20:56:23.217 +03:00 [INF] Executed DbCommand (3ms) [Parameters=[@__request_UserId_0='?' (DbType = Guid)], CommandType='"Text"', CommandTimeout='30']
+SELECT "n"."Id", "n"."Title"
+FROM "Notes" AS "n"
+WHERE "n"."UserId" = @__request_UserId_0
+2023-12-22 20:56:23.218 +03:00 [INF] Executing OkObjectResult, writing value of type 'Notes.Application.Notes.Queries.GetNoteList.NoteListVm'.
+2023-12-22 20:56:23.219 +03:00 [INF] Executed action Notes.WebApi.Controllers.NoteController.GetAll (Notes.WebApi) in 8.0073ms
+2023-12-22 20:56:23.219 +03:00 [INF] Executed endpoint 'Notes.WebApi.Controllers.NoteController.GetAll (Notes.WebApi)'
+2023-12-22 20:56:23.219 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7156/api/1.0/Note - - - 200 - application/json;+charset=utf-8 11.8243ms
