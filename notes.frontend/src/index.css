@@ -6,3 +6,8 @@ body {
   min-height: 100vh;
   font-family: "Segoe UI";
 }
+
+#root {
+  display: flex;
+  flex-flow: column;
+}

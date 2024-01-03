@@ -10,6 +10,8 @@ import SignInOidc from "./auth/SignInOidc";
 import SignOutOidc from "./auth/SignOutOidc";
 import NoteList from "./components/NoteComponents/NoteList/NoteList";
 import { AuthContext } from "./context/auth-context";
+import { Button, Navbar } from "react-bootstrap";
+import NoteCreateModal from "./components/ModalComponents/CreateModal/NoteCreateModal";
 
 const App: FC<{}> = (): ReactElement => {
   const [userName, setUser] = useState("");
@@ -39,11 +41,13 @@ const App: FC<{}> = (): ReactElement => {
 
       {userName ? (
         <div className="container my-5">
-          <h1 className="text-center">{userName}</h1>
           <AuthProvider userManager={userManager}>
             <Router>
               <Routes>
-                <Route path="/" Component={NoteList} />
+                <Route
+                  path="/"
+                  element={<NoteList userName={userName}></NoteList>}
+                />
                 <Route path="/signout-oidc" Component={SignOutOidc} />
               </Routes>
             </Router>

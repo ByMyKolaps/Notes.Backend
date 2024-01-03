@@ -1,7 +1,7 @@
-import { NoteDetailsVm } from "../../../api/api";
+import { UpdateNoteDto } from "../../../api/api";
 
 interface NoteEditModalProps {
-  note: NoteDetailsVm;
+  note: UpdateNoteDto;
   onChange: () => Promise<void>;
 }
 

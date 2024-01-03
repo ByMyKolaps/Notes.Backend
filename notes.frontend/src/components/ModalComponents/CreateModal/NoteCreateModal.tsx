@@ -1,40 +1,44 @@
 import { FC, useState } from "react";
+import NoteCreateModalProps from "./NoteCreateModalProps";
 import { Button, Modal } from "react-bootstrap";
 
-import NoteEditModalProps from "./NoteEditModalProps";
+import { Client, CreateNoteDto } from "../../../api/api";
 import ModalProps from "../ModalProps";
-import { Client, UpdateNoteDto } from "../../../api/api";
 
 const apiClient = new Client("https://localhost:7156");
 
-async function editNote(note: UpdateNoteDto) {
-  await apiClient.update("1", note);
-  console.log("Note updated");
+async function createNote(note: CreateNoteDto) {
+  await apiClient.create("1", note);
+  console.log("Note created");
 }
 
-const NoteEditModal: FC<{
-  editProps: NoteEditModalProps;
-  modalProps: ModalProps;
-}> = ({ editProps, modalProps }) => {
-  const [newNote, setNewNote] = useState<UpdateNoteDto>(editProps.note);
+const defaultValue: CreateNoteDto = {
+  details: "",
+  title: "",
+};
 
-  const handleUpdate = async () => {
-    if (!newNote.details) newNote.details = "";
-    editNote(newNote).then(editProps.onChange);
+const NoteCreateModal: FC<{
+  createProps: NoteCreateModalProps;
+  modalProps: ModalProps;
+}> = ({ createProps, modalProps }) => {
+  const [note, setNote] = useState<CreateNoteDto>(defaultValue);
+
+  const handleCreate = async () => {
+    if (!note.details) note.details = "";
+    createNote(note).then(createProps.onChange);
     handleHide();
   };
 
   const handleHide = () => {
-    setNewNote(newNote);
+    note.details = "";
+    note.title = "";
     modalProps.hide();
   };
-
-  console.log("Hello from edit modal");
 
   return (
     <Modal
       show={modalProps.isShow}
-      onHide={handleHide}
+      onHide={modalProps.hide}
       backdrop={true}
       keyboard={false}
       animation={false}
@@ -43,13 +47,14 @@ const NoteEditModal: FC<{
         <Modal.Title>
           <input
             className="form-control"
-            placeholder={newNote.title}
+            placeholder="Enter note title"
             onChange={(e) => {
-              setNewNote((prev) => ({
+              setNote((prev) => ({
                 ...prev,
                 title: e.target.value,
               }));
             }}
+            value={note.title}
           />
         </Modal.Title>
       </Modal.Header>
@@ -60,23 +65,27 @@ const NoteEditModal: FC<{
           <textarea
             className="form-control"
             rows={5}
-            onChange={(e) =>
-              setNewNote((prev) => ({
+            onChange={(e) => {
+              setNote((prev) => ({
                 ...prev,
                 details: e.target.value,
-              }))
-            }
-            value={newNote.details}
+              }));
+            }}
+            value={note.details}
           ></textarea>
         </p>
       </Modal.Body>
       <Modal.Footer>
-        <Button className="btn btn-warning" onClick={handleUpdate}>
-          Update
+        <Button
+          className="btn"
+          variant="outline-success"
+          onClick={handleCreate}
+        >
+          Create
         </Button>
       </Modal.Footer>
     </Modal>
   );
 };
 
-export default NoteEditModal;
+export default NoteCreateModal;

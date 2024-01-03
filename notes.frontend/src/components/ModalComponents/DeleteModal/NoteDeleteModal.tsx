@@ -1,5 +1,5 @@
-import { FC, useState } from "react";
-import { CreateNoteDto, Client, NoteDetailsVm } from "../../../api/api";
+import { FC } from "react";
+import { Client } from "../../../api/api";
 import { Button, Modal } from "react-bootstrap";
 import ModalProps from "../ModalProps";
 import NoteDeleteModalProps from "./NoteDeleteModalProps";
